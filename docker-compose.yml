@@ -15,7 +15,7 @@ services:
     build:
       context: ./api
       args:
-        app_env: ${'development'}
+        app_env: ${APP_ENV}
     volumes:
       - ./api:/go/src/github.com/user/GoDoRP/api
     ports:
@@ -27,7 +27,7 @@ services:
     build:
       context: ./frontend
       args:
-        app_env: ${'development'}
+        app_env: ${APP_ENV}
     volumes:
       - ./frontend/src:/frontend/src 
     ports:
